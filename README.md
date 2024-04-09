@@ -34,5 +34,5 @@ Ce projet est mis à disposition sous la Licence MIT. Voir le fichier `LICENSE` 
 
 - **Nom** : Mohand MOUAICI
 - **Email** : mohand.mouaici@icloud.com
-- **LinkedIn** : [Votre Profil LinkedIn](https://www.linkedin.com/in/mohand-mouaici-96221722b)
-- **GitHub** : [Votre GitHub](https://github.com/Mohand-MOUAICI)
+- **LinkedIn** : [Mohand-MOUAICI](https://www.linkedin.com/in/mohand-mouaici-96221722b)
+- **GitHub** : [Mohand_MOUAICI](https://github.com/Mohand-MOUAICI)
