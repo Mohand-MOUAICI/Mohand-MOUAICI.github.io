@@ -1,9 +1,12 @@
-@media screen and (max-width: 768px) {
-    body {
-      font-size: 14px;
+@media (min-width: 768px) {
+    .sidebar {
+        width: 25%;
     }
-  }
-  
+
+    .content {
+        width: 75%;
+    }
+}
 
 :root {
     --primary-color: #5480ac;
@@ -17,6 +20,10 @@
 }
 
 
+img, video {
+    max-width: 100%;
+    height: auto;
+}
 body, html {
     margin: 0;
     padding: 0;
@@ -28,6 +35,13 @@ body, html {
     background-position: center;
     background-attachment: fixed;
     text-align: justify;
+}
+body {
+    font-size: 16px; /* Utilisez px pour la taille de base de la police */
+}
+
+h1 {
+    font-size: 2rem; /* S'adapte en fonction de la taille de la police de base du body */
 }
 
 #about, #skills, #experience, #education, #interests {
@@ -48,13 +62,10 @@ body, html {
 
 
 .layout-container {
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--container-bg);
-    box-shadow: var(--shadow-3d);
+    display: flex; /* ou `display: grid;` */
+    flex-direction: column; /* Pour Flexbox */
 }
+
 
 
 
@@ -284,7 +295,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position:  relative;
     width: 100%;
     bottom: 0;
 }
