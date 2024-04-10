@@ -55,7 +55,7 @@ h1 {
     font-size: 2rem; /* S'adapte en fonction de la taille de la police de base du body */
 }
 
-#about, #skills, #experience, #education, #interests, #contact {
+#about, #skills, #experience, #education, #interests, #contact, #cv-download-button {
     background-color: rgba(69, 67, 67, 0.733);
     box-shadow: var(--shadow-3d);
     border-radius: 10px;
@@ -66,7 +66,7 @@ h1 {
 
 
 
-#about:hover, #skills:hover, #experience:hover, #education:hover, #interests:hover, #contact:hover {
+#about:hover, #skills:hover, #experience:hover, #education:hover, #interests:hover, #contact:hover, #cv-download-button:active {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 12px 12px rgba(0, 0, 0, 0.22);
 }
@@ -105,7 +105,8 @@ a {
 }
 
 a:hover {
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    transform: scale(2.05);
 }
 
 button {
@@ -126,6 +127,21 @@ button:hover {
 }
 
 
+.cv-download-button {
+    background-color: var(--accent-color); /* Choisissez une couleur qui se démarque ou qui s'harmonise */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block; /* Important pour l'espacement et le dimensionnement */
+    margin-left: 20px; /* Espacement depuis les autres éléments de navigation */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cv-download-button:hover {
+    background-color: #d2caca00; /* Inversez ou ajustez la couleur au survol si nécessaire */
+    transform: scale(1.05); /* Légère augmentation pour un effet au survol */
+}
 .header-container button {
     background-color: var(--accent-color);
 }
@@ -315,57 +331,66 @@ footer {
     margin: 5px 0;
 }
 
-.cv-download-button {
-    background-color: var(--accent-color); /* Choisissez une couleur qui se démarque ou qui s'harmonise */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block; /* Important pour l'espacement et le dimensionnement */
-    margin-left: 20px; /* Espacement depuis les autres éléments de navigation */
-    transition: background-color 0.3s, transform 0.2s;
-}
 
-.cv-download-button:hover {
-    background-color: var(--primary-color); /* Inversez ou ajustez la couleur au survol si nécessaire */
-    transform: scale(1.05); /* Légère augmentation pour un effet au survol */
-}
-
-/* Personnalisation de la barre de défilement entière */
 ::-webkit-scrollbar {
-    width: 3px; /* Largeur de la scrollbar */
+    width: 3px;
 }
 
-/* Le chemin de défilement (arrière-plan de la barre de défilement) */
 ::-webkit-scrollbar-track {
-    background: var(--background-color); /* Couleur de fond */
-    border-radius: 10px; /* Bords arrondis */
+    background: var(--background-color);
+    border-radius: 10px;
 }
 
-/* Le gestionnaire de défilement (la partie que vous déplacez) */
 ::-webkit-scrollbar-thumb {
-    background-color: #262626ad; /* Couleur du gestionnaire */
-    border-radius: 10px; /* Bords arrondis */
-    border: 3px solid #262626ad; /* Bordure extérieure du gestionnaire */
+    background-color: #262626ad;
+    border-radius: 10px;
+    border: 3px solid #262626ad;
 }
 
-/* Survol du gestionnaire de défilement */
 ::-webkit-scrollbar-thumb:hover {
-    background: #262626ad; /* Couleur au survol */
+    background: #262626ad;
 }
 
 
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Cela centre les enfants flex sur l'axe transversal (vertical ici) */
+    justify-content: center; /* Cela centre les enfants flex sur l'axe principal (horizontal) */
+    padding: 20px;
+}
+
+#contact .form-group {
+    width: 100%; /* Les form-group prennent toute la largeur du formulaire */
+    max-width: 500px; /* Ajustez selon la largeur maximale souhaitée pour les champs */
+    margin-bottom: 15px; /* Espacement entre les champs */
+}
+
+#contact label {
+    display: block; /* Rendre les labels comme blocs pour qu'ils prennent toute la largeur */
+    text-align: center; /* Centre le texte des labels */
+    margin-bottom: 5px; /* Espacement entre le label et le champ de saisie */
+}
 
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="name"],
 #contact textarea {
-    width: 90%;
-    padding: 15px;
-    border: 1px solid #707d87;
-    border-radius: 5px;
-    background-color: #e0e4e8;
+    width: 100%; /* Les champs prennent toute la largeur de leur parent .form-group */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
 }
+
+#contact input[type="submit"] {
+    padding: 10px 20px;
+    margin-top: 10px; /* Espacement au-dessus du bouton d'envoi */
+    cursor: pointer; /* Affiche un indicateur de clic sur le bouton */
+}
+
+
 
 
 
