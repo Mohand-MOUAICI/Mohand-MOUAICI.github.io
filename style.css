@@ -7,16 +7,26 @@
         width: 75%;
     }
 }
+@media screen and (max-width: 768px) {
+    .layout-container {
+        flex-direction: column;
+    }
+
+    .sidebar, .main-content {
+        width: 100%;
+        text-align: center;
+    }
+}
 
 :root {
-    --primary-color: #5480ac;
+    --primary-color: #0769ca;
     --background-color: #f0f4f800;
-    --text-color: #333;
+    --text-color: #d4d1d1;
     --accent-color: #6e778200;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --shadow-3d: 0 4px 8px rgba(0, 0, 0, 0.2);
     --container-bg: rgba(255, 255, 255, 0.1);
-    --container-hover-bg: rgba(209, 227, 248, 0.5);
+    --container-hover-bg: rgba(209, 227, 248, 0.976);
 }
 
 
@@ -30,11 +40,12 @@ body, html {
     font-family: var(--font-family);
     color: var(--text-color);
     background-color: var(--background-color);
-    background-image: url('images/Backround.jpeg');
+    background-image: url('images/Backround.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     text-align: justify;
+    padding-top: 60px;
 }
 body {
     font-size: 16px; /* Utilisez px pour la taille de base de la police */
@@ -45,7 +56,7 @@ h1 {
 }
 
 #about, #skills, #experience, #education, #interests {
-    background-color: rgba(255, 255, 255, 0.186);
+    background-color: rgba(69, 67, 67, 0.733);
     box-shadow: var(--shadow-3d);
     border-radius: 10px;
     padding: 20px;
@@ -57,7 +68,7 @@ h1 {
 
 #about:hover, #skills:hover, #experience:hover, #education:hover, #interests:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 12px 12px rgba(0, 0, 0, 0.22); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 12px 12px rgba(0, 0, 0, 0.22);
 }
 
 
@@ -95,17 +106,6 @@ a {
 
 a:hover {
     color: var(--accent-color);
-}
-
-@media screen and (max-width: 768px) {
-    .layout-container {
-        flex-direction: column;
-    }
-
-    .sidebar, .main-content {
-        width: 100%;
-        text-align: center;
-    }
 }
 
 button {
@@ -154,7 +154,7 @@ button:hover {
 }
 
 .education-item {
-    background-color: #f9f9f995;
+    background-color: #0a0808a2;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.418);
@@ -183,7 +183,7 @@ button:hover {
 }
 
 .interest-item {
-    background-color: #f9f9f995;
+    background-color: #0a0808a2;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.418);
@@ -214,7 +214,7 @@ button:hover {
 
 
 .experience-item {
-    background-color: #f9f9f988;
+    background-color: #0a0808a2;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.461);
     overflow: hidden;
@@ -263,10 +263,14 @@ button:hover {
 
 
 header {
-    background-color: #3333334d;
+    background-color: #262626ad;
     color: white;
-    padding: 20px 0;
+    padding: 2px 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width:  100%;
 }
 
 header h1 {
@@ -325,4 +329,27 @@ footer {
 .cv-download-button:hover {
     background-color: var(--primary-color); /* Inversez ou ajustez la couleur au survol si nécessaire */
     transform: scale(1.05); /* Légère augmentation pour un effet au survol */
+}
+
+/* Personnalisation de la barre de défilement entière */
+::-webkit-scrollbar {
+    width: 3px; /* Largeur de la scrollbar */
+}
+
+/* Le chemin de défilement (arrière-plan de la barre de défilement) */
+::-webkit-scrollbar-track {
+    background: var(--background-color); /* Couleur de fond */
+    border-radius: 10px; /* Bords arrondis */
+}
+
+/* Le gestionnaire de défilement (la partie que vous déplacez) */
+::-webkit-scrollbar-thumb {
+    background-color: #262626ad; /* Couleur du gestionnaire */
+    border-radius: 10px; /* Bords arrondis */
+    border: 3px solid #262626ad; /* Bordure extérieure du gestionnaire */
+}
+
+/* Survol du gestionnaire de défilement */
+::-webkit-scrollbar-thumb:hover {
+    background: #262626ad; /* Couleur au survol */
 }
