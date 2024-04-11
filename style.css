@@ -48,11 +48,11 @@ body, html {
     padding-top: 60px;
 }
 body {
-    font-size: 16px; /* Utilisez px pour la taille de base de la police */
+    font-size: 16px;
 }
 
 h1 {
-    font-size: 2rem; /* S'adapte en fonction de la taille de la police de base du body */
+    font-size: 2rem;
 }
 
 #about, #skills, #experience, #education, #interests, #contact, #cv-download-button {
@@ -73,8 +73,8 @@ h1 {
 
 
 .layout-container {
-    display: flex; /* ou `display: grid;` */
-    flex-direction: column; /* Pour Flexbox */
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -128,19 +128,19 @@ button:hover {
 
 
 .cv-download-button {
-    background-color: var(--accent-color); /* Choisissez une couleur qui se démarque ou qui s'harmonise */
+    background-color: var(--accent-color);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    display: inline-block; /* Important pour l'espacement et le dimensionnement */
-    margin-left: 20px; /* Espacement depuis les autres éléments de navigation */
+    display: inline-block;
+    margin-left: 20px;
     transition: background-color 0.3s, transform 0.2s;
 }
 
 .cv-download-button:hover {
-    background-color: #d2caca00; /* Inversez ou ajustez la couleur au survol si nécessaire */
-    transform: scale(1.05); /* Légère augmentation pour un effet au survol */
+    background-color: #d2caca00;
+    transform: scale(1.05);
 }
 .header-container button {
     background-color: var(--accent-color);
@@ -356,28 +356,28 @@ footer {
 #contact form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Cela centre les enfants flex sur l'axe transversal (vertical ici) */
-    justify-content: center; /* Cela centre les enfants flex sur l'axe principal (horizontal) */
+    align-items: center;
+    justify-content: center;
     padding: 20px;
 }
 
 #contact .form-group {
-    width: 100%; /* Les form-group prennent toute la largeur du formulaire */
-    max-width: 500px; /* Ajustez selon la largeur maximale souhaitée pour les champs */
-    margin-bottom: 15px; /* Espacement entre les champs */
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 15px;
 }
 
 #contact label {
-    display: block; /* Rendre les labels comme blocs pour qu'ils prennent toute la largeur */
-    text-align: center; /* Centre le texte des labels */
-    margin-bottom: 5px; /* Espacement entre le label et le champ de saisie */
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="name"],
 #contact textarea {
-    width: 100%; /* Les champs prennent toute la largeur de leur parent .form-group */
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -386,11 +386,28 @@ footer {
 
 #contact input[type="submit"] {
     padding: 10px 20px;
-    margin-top: 10px; /* Espacement au-dessus du bouton d'envoi */
-    cursor: pointer; /* Affiche un indicateur de clic sur le bouton */
+    margin-top: 10px;
+    cursor: pointer;
+}
+/* Stylisation de l'horloge */
+.clock {
+    font-family: 'Arial', sans-serif;
+    color: #6e7071;
+    background-color: #ecf0f100;
+    border-radius: 8px;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.115);
 }
 
+.clock span {
+    margin: 0 8px;
+}
 
-
-
-
+.clock span:nth-child(2),
+.clock span:nth-child(4) {
+    margin: 0 5px;
+}

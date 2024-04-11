@@ -1,31 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.querySelector('#contactForm');
+document.addEventListener('DOMContentLoaded', function() {
+    // Fonction pour mettre à jour l'heure
+    function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        // Ajoute un zéro devant les nombres < 10
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        // Met à jour le contenu des éléments HTML
+        document.getElementById('hrs').textContent = hours;
+        document.getElementById('min').textContent = minutes;
+        document.getElementById('sec').textContent = seconds;
+    }
+
+    // Met à jour l'horloge immédiatement
+    updateClock();
     
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        const data = {};
-        formData.forEach((value, key) => (data[key] = value));
-        
-        try {
-            const response = await fetch('https://votreapi.com/envoi', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-            
-            if (response.ok) {
-                alert('Message envoyé avec succès!');
-                contactForm.reset();
-            } else {
-                alert('Il y a eu un problème avec l\'envoi de votre message.');
-            }
-        } catch (error) {
-            console.error('Erreur:', error);
-            alert('Erreur lors de l\'envoi du message.');
-        }
-    });
+    // Met à jour l'horloge chaque seconde
+    setInterval(updateClock, 1000);
 });
