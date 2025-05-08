@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohand MOUAICI - Ingénieur DevOps/Cloud</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="hero"> 
+                <div class="container">
+                    <div class="clock">
+                        <span id="hrs">00</span>
+                        <span>:</span>
+                        <span id="min">00</span>
+                        <span>:</span>
+                        <span id="sec">00</span>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul id="nav-menu">
+                    <li><button onclick="showSection('about')">À propos</button></li>
+                    <li><button onclick="showSection('skills')">Compétences</button></li>
+                    <li><button onclick="showSection('experience')">Expérience</button></li>
+                    <li><button onclick="showSection('education')">Formation</button></li>
+                    <li><button onclick="showSection('interests')">Intérêts</button></li>
+                    <li><button onclick="showSection('contact')">Contact</button></li>
+                    <li><a href="documents/Mohand_MOUAICI_CV_DevOps.pdf" download="CV_Mohand-MOUAICI" class="cv-download-button">Télécharger mon CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="layout-container">
+        <section class="main-content">
+            <section id="about">
+                <img src="images/mohand_mouaici.jpg" alt="Mohand MOUAICI" class="profile-pic">
+                <h1>Mohand MOUAICI</h1>
+                <p>Ingénieur DevOps/Cloud</p>
+                <p><strong>Téléphone :</strong> +33 7 62 92 77 32</p>
+                <p><strong>Email :</strong> mohand.mouaici@icloud.com</p>
+                <div>
+                    <a href="https://www.linkedin.com/in/mohand-mouaici-96221722b" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/Mohand-MOUAICI" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+                <h2>À propos de moi</h2>
+                <p>Je suis Mohand MOUAICI, ingénieur DevOps/Cloud passionné par l’automatisation, les environnements Linux et le déploiement d’infrastructures cloud robustes. Fort de plusieurs expériences dans des environnements exigeants, notamment chez Stellantis et Sogeti, j’ai contribué à la supervision d'applications industrielles, à la mise en place de pipelines CI/CD, et au déploiement d’API sécurisées. Motivé, curieux et toujours en veille technologique, je cherche constamment à optimiser la performance des systèmes et à favoriser la collaboration entre les équipes développement et exploitation.</p>
+            </section>
+
+            <section id="skills" style="display: none;">
+                <h2>Compétences & Certifications</h2>
+                <p><strong>Compétences techniques :</strong> Linux, CI/CD, Git, GitHub Actions, Azure DevOps, Docker, Kubernetes, Ansible, Terraform, AWS, Python, Bash, supervision (Prometheus, Grafana), gestion des incidents, support technique.</p>
+                <div class="certifications">
+                    <img src="/images/cisco-ccna-certwizard.png" alt="Certification Cisco">
+                    <img src="/images/aws-academy-graduate-aws-academy-cloud-developing.png" alt="Certification AWS 1">
+                    <img src="/images/aws-cloud-quest-cloud-practitioner.png" alt="Certification AWS 2">
+                    <img src="/images/aws-academy-graduate-aws-academy-cloud-architecting.png" alt="Certification AWS 3">
+                    <img src="/images/aws-academy-graduate-aws-academy-introduction-to-cloud-semester-1.png" alt="Certification AWS 4">
+                    <img src="/images/aws-academy-graduate-aws-academy-introduction-to-cloud-semester-2.png" alt="Certification AWS 5">
+                </div>
+                <p><strong>Certifications :</strong> AWS Academy Graduate - Cloud Architecting, AWS Cloud Quest: Cloud Practitioner, CCNA (1 à 4), AWS Academy Graduate - Introduction to Cloud Semesters 1 & 2</p>
+            </section>
+
+            <section id="experience" style="display: none;">
+                <h2>Expérience Professionnelle</h2>
+                <div class="experience-container">
+                    <div class="experience-item">
+                        <article>
+                            <img src="/images/sogeti.png" alt="Logo Sogeti" class="company-logo">
+                            <h3>Consultant IT - Sogeti (Capgemini Engineering), Meroux, France</h3>
+                            <p>Septembre 2024 – Présent</p>
+                            <ul>
+                                <li>Mission chez SogetiLabs : développement DevOps de l’application ELIT (CI/CD, intégration cloud).</li>
+                                <li>Déploiement et maintenance d’une API via Azure DevOps.</li>
+                                <li>Mission chez Stellantis : gestion des incidents et changements (INDUS vie courante).</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="experience-item">
+                        <article>
+                            <img src="/images/stellantis.jpg" alt="Logo Stellantis" class="company-logo">
+                            <h3>Alternant DevOps - Stellantis, Belfort, France</h3>
+                            <p>Novembre 2023 – Août 2024</p>
+                            <ul>
+                                <li>Projet de monitoring multi-cloud AWS/Azure.</li>
+                                <li>Automatisation via Terraform.</li>
+                                <li>Développement de fonctions Lambda en Python.</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="experience-item">
+                        <article>
+                            <img src="/images/urca.png" alt="Logo URCA" class="company-logo">
+                            <h3>Développeur Applications - URCA, Reims, France</h3>
+                            <p>Avril 2023 – Août 2023</p>
+                            <ul>
+                                <li>Développement d’une application IoT pour le suivi de colis.</li>
+                                <li>Technologies : Angular, Python, Docker, Eclipse Ditto.</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="experience-item">
+                        <article>
+                            <img src="/images/ugecam.png" alt="Logo UGECAM" class="company-logo">
+                            <h3>Responsable Systèmes et Réseaux - UGECAM IDF</h3>
+                            <p>Avril 2022 – Août 2022</p>
+                            <ul>
+                                <li>Migration réseau, configuration de Switches HP et serveurs Dell.</li>
+                                <li>Gestion de domaine sous Active Directory.</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="experience-item">
+                        <article>
+                            <img src="/images/bea.jpg" alt="Logo BEA" class="company-logo">
+                            <h3>Technicien Installateur - Banque Extérieure d’Algérie</h3>
+                            <p>Novembre 2020 – Janvier 2021</p>
+                            <ul>
+                                <li>Installation de serveur CUCM sur VM Linux.</li>
+                                <li>Configuration de la téléphonie IP.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" style="display: none;">
+                <h2>Formation</h2>
+                <div class="education-container">
+                    <div class="education-item">
+                        <div class="education-details">
+                            <h3>Master 2 Réseaux et Télécommunications</h3>
+                            <p>Université de Reims Champagne-Ardenne, 2023 – 2024</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-details">
+                            <h3>Master 1 Réseaux et Télécommunications</h3>
+                            <p>Université de Reims Champagne-Ardenne, 2022 – 2023</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-details">
+                            <h3>Licence Professionnelle Réseaux et Télécoms</h3>
+                            <p>Université Polytechnique Hauts-de-France, 2021 – 2022</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-details">
+                            <h3>BTS Gestion des Réseaux Informatiques</h3>
+                            <p>INSIM Tizi Ouzou, 2018 – 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="interests" style="display: none;">
+                <h2>Intérêts</h2>
+                <div class="interests-container">
+                    <div class="interest-item">
+                        <i class="fas fa-swimmer"></i>
+                        <p>Natation</p>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-camera-retro"></i>
+                        <p>Photographie de paysages</p>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-gamepad"></i>
+                        <p>Jeux vidéo (Action-RPG)</p>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-microchip"></i>
+                        <p>IoT & Automatisation</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" style="display: none;">
+                <h2>Contact</h2>
+                <form action="https://formspree.io/f/mzbnkvqo" method="POST">
+                    <div class="form-group">
+                        <label for="name">Votre nom :</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Votre email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Votre message :</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>© 2024 Mohand MOUAICI. Tous droits réservés.</p>
+            <p>Contact Email: mohand.mouaici@icloud.com</p>
+            <div class="social-links">
+                <a href="https://github.com/Mohand-MOUAICI" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mohand-mouaici-96221722b" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.main-content > section').forEach(section => {
+                section.style.display = 'none';
+            });
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
